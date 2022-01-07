@@ -55,6 +55,12 @@ android {
 
 dependencies {
 
+    implementation(project(":core"))
+    implementation(project(":feature_main"))
+    implementation(project(":feature_story_create"))
+
+    implementation("com.google.android.material:material:1.4.0")
+
     implementation(Deps.Androidx.room)
     implementation(Deps.Ktx.navigationFragment)
     implementation(Deps.Ktx.navigationUi)
