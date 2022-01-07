@@ -32,7 +32,7 @@ class StoryCreateFragment :
 
     override fun initUX() {
         with(binding) {
-            btnBack.setOnClickListener {
+            ivClose.setOnClickListener {
                 viewModel.onBaskToListStory()
             }
         }

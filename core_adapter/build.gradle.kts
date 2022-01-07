@@ -5,7 +5,6 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -28,9 +27,7 @@ android {
 }
 
 dependencies {
-
-    api(project(":resources"))
-    implementation(project(":core"))
-    implementation(Deps.Google.dagger)
-    kapt(Deps.Kapt.dagger)
+    implementation(Deps.Androidx.recyclerView)
+    implementation(Deps.Androidx.cardView)
+    implementation(Deps.Androidx.material)
 }
