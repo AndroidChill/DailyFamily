@@ -10,6 +10,7 @@ import soc.life.familydaily.core.base.BaseFragment
 import soc.life.familydaily.core.di.BaseViewModelFactory
 import soc.life.familydaily.core_adapter.BaseRecyclerAdapter
 import soc.life.familydaily.core_adapter.ViewHolderType
+import soc.life.familydaily.core_views.setOnClick
 import soc.life.familydaily.feature_story_create.R
 import soc.life.familydaily.feature_story_create.viewModel.StoryViewModel
 import soc.life.familydaily.feature_story_create_bottom.StoryCreateBottomViewData
@@ -39,31 +40,33 @@ class StoryCreateFragment :
     }
 
     override fun initUI(): Unit = with(binding) {
+
+    }
+
+    override fun initUX(): Unit = with(binding) {
+        ivClose.setOnClick(viewModel::onBaskToListStory)
+        btnSave.setOnClick(viewModel::onBaskToListStory)
         rvBottom.apply {
-            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             adapter = bottomAdapter
         }
     }
 
-    override fun initUX() {
-        with(binding) {
-            ivClose.setOnClickListener {
-                viewModel.onBaskToListStory()
-            }
-        }
-    }
 
     override fun initViewModel() {
-        bottomAdapter.replaceAsNew(mutableListOf<ViewHolderType>(
-            StoryCreateBottomViewData.List(R.drawable.ic_list_bottom),
-            StoryCreateBottomViewData.Sticker(R.drawable.ic_sticker_bottom),
-            StoryCreateBottomViewData.Smile(R.drawable.ic_smile_bottom),
-            StoryCreateBottomViewData.Image(R.drawable.ic_image_bottom),
-            StoryCreateBottomViewData.Microphone(R.drawable.ic_microphone_bottom),
-            StoryCreateBottomViewData.Paint(R.drawable.ic_paint_bottom),
-            StoryCreateBottomViewData.Tag(R.drawable.ic_tag_bottom),
-            StoryCreateBottomViewData.Text(R.drawable.ic_text_bottom),
-        ))
+        bottomAdapter.replaceAsNew(
+            mutableListOf<ViewHolderType>(
+                StoryCreateBottomViewData.List(R.drawable.ic_list_bottom),
+                StoryCreateBottomViewData.Sticker(R.drawable.ic_sticker_bottom),
+                StoryCreateBottomViewData.Smile(R.drawable.ic_smile_bottom),
+                StoryCreateBottomViewData.Image(R.drawable.ic_image_bottom),
+                StoryCreateBottomViewData.Microphone(R.drawable.ic_microphone_bottom),
+                StoryCreateBottomViewData.Paint(R.drawable.ic_paint_bottom),
+                StoryCreateBottomViewData.Tag(R.drawable.ic_tag_bottom),
+                StoryCreateBottomViewData.Text(R.drawable.ic_text_bottom),
+            )
+        )
     }
 
     companion object {

@@ -30,7 +30,7 @@ android {
 dependencies {
 
     api(project(":core"))
-    implementation(project(":feature_story_create_bottom"))
+    api(project(":feature_story_create_bottom"))
 
     implementation(Deps.Google.dagger)
     kapt(Deps.Kapt.dagger)

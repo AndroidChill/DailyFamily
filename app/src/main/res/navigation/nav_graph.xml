@@ -23,4 +23,10 @@
         android:label="StoryCreateFragment"
         tools:layout="@layout/fragment_story_create"/>
 
+    <dialog
+        android:id="@+id/dialog_story_create_bottom"
+        android:name="soc.life.familydaily.feature_story_create_bottom.view.StoryCreateBottomSheetFragment"
+        android:label="StoryCreateBottomSheetDialogFragment"
+        tools:layout="@layout/dialog_story_create_bottom"/>
+
 </navigation>
