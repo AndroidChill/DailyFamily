@@ -18,4 +18,5 @@ android {
 
 dependencies {
     api(Deps.Androidx.appcompat)
+    api(Deps.Androidx.material)
 }

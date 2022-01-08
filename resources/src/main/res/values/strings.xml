@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FamilyDaily</string>
+    <string name="image_for_bottom_panel_in_create_story">Image for bottom panel in create story</string>
+    <string name="story_create_close_image">close image</string>
+</resources>
