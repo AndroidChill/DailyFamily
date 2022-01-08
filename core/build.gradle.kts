@@ -38,7 +38,10 @@ android {
 
 dependencies {
 
+    api(project(":core_adapter"))
+    api(project(":core_views"))
     api(project(":navigation"))
+    api(project(":resources"))
 
     api(Deps.Androidx.appcompat)
     api(Deps.Androidx.recyclerView)

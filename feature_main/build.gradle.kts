@@ -28,8 +28,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":core"))
-    implementation(project(":feature_story_create"))
+
+    api(project(":core"))
+
     implementation(Deps.Google.dagger)
     kapt(Deps.Kapt.dagger)
 }

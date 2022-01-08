@@ -55,7 +55,6 @@ android {
 
 dependencies {
 
-    implementation(project(":core"))
     implementation(project(":feature_main"))
     implementation(project(":feature_story_create"))
 

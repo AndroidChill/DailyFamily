@@ -1,9 +1,11 @@
-import soc.life.familydaily.Base
 import soc.life.familydaily.Deps
+import soc.life.familydaily.Base
 
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
@@ -26,7 +28,10 @@ android {
 }
 
 dependencies {
+    implementation(Deps.Androidx.appcompat)
     implementation(Deps.Androidx.recyclerView)
-//    implementation(Deps.Androidx.cardView)
-//    implementation(Deps.Androidx.material)
+    implementation(Deps.Androidx.constraintLayout)
+    implementation(Deps.Androidx.cardView)
+    implementation(Deps.Androidx.material)
+    implementation(Deps.Emoji.emojiCompat)
 }

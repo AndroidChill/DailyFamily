@@ -26,7 +26,9 @@ android {
 }
 
 dependencies {
+
+    api(project(":core"))
+
     implementation(Deps.Androidx.recyclerView)
-//    implementation(Deps.Androidx.cardView)
-//    implementation(Deps.Androidx.material)
+    implementation(Deps.Androidx.cardView)
 }

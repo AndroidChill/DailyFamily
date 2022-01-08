@@ -11,6 +11,7 @@ buildscript {
         classpath(soc.life.familydaily.BuildPlugins.kotlin)
         classpath(soc.life.familydaily.BuildPlugins.ktlint)
         classpath(soc.life.familydaily.BuildPlugins.hilt)
+//        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0")
     }
 }
 
